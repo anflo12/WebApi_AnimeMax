@@ -23,8 +23,9 @@ app.get('/AnimeEpisode', (req, res) => {
   })
 })
 
+app.set('port',process.env.PORT || 3000)
 
-http.createServer(app).listen(8001, () => {
+http.createServer(app).listen(app.get('port'), () => {
   console.log('Server started at http://localhost:8001');
 });
 
