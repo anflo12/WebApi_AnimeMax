@@ -3,11 +3,10 @@ var http = require('http')
 var app = express()
 const API = require('animeflv-scrapper')
 const params = {
-  status: 1,
-  page: 1,
+ 
 }
 
-app.get('/animes', (req, res) => {
+app.get('/Animes', (req, res) => {
  
   API.getAnimes(params).then(data => {
     console.log(data)
@@ -23,10 +22,18 @@ app.get('/AnimeEpisode', (req, res) => {
   })
 })
 
+
+app.get('/AllAnimes', (req, res) => {
+ 
+  API.getAnimes(params).then(data => {
+    res.status(200).send({data})
+  });
+   
+})
 app.set('port',process.env.PORT || 3000)
 
 http.createServer(app).listen(app.get('port'), () => {
-  console.log('Server started at http://localhost:8001');
+  console.log('Server started at http://localhost:3000');
 });
 
 
