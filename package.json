@@ -10,7 +10,10 @@
   "author": "andres",
   "license": "ISC",
   "dependencies": {
+    "animeflv-scrapper": "^0.2.9",
     "body-parser": "^1.19.0",
+    "brotli": "^1.3.2",
+    "cloudscraper": "^4.5.0",
     "express": "^4.17.1"
   }
 }
