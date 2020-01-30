@@ -4,13 +4,12 @@ var app = express()
 const API = require('animeflv-scrapper')
 
 const params = {
- type: "tv",
- year:2019
+  year: 2020,
+  type: "tv",
   status: 2,
   order: "updated",
-  page: 2
+  page: 1
 };
-
 app.get('/Animes', (req, res) => {
  
   API.getAnimes(params).then(data => {
