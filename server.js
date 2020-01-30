@@ -20,7 +20,7 @@ app.get('/Animes', (req, res) => {
 
 app.get('/AnimeEpisode', (req, res) => {
  
-  API.getAnimeInfo('pokemon-2019', 5668).then(dataepisode => {
+  API.getAnimeInfo("one-piece-tv", 5495).then(dataepisode => {
     console.log(dataepisode)
     res.status(200).send({dataepisode})
   })
