@@ -5,6 +5,7 @@ const API = require('animeflv-scrapper')
 
 const params = {
  type: "tv",
+ year:2019
   status: 2,
   order: "updated",
   page: 2
