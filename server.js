@@ -6,7 +6,7 @@ const API = require('animeflv-scrapper')
 const params = {
   status: 2,
   order: "updated",
-  page: 1
+  page: 2
 };
 
 app.get('/Animes', (req, res) => {
