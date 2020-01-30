@@ -2,12 +2,13 @@ var express = require('express')
 var http = require('http')
 var app = express()
 const API = require('animeflv-scrapper')
-genre: "accion",
-  year: 2018,
-  type: "tv",
+
+const params = {
   status: 2,
   order: "updated",
   page: 1
+};
+
 app.get('/Animes', (req, res) => {
  
   API.getAnimes(params).then(data => {
