@@ -4,6 +4,7 @@ var app = express()
 const API = require('animeflv-scrapper')
 
 const params = {
+ type: "tv",
   status: 2,
   order: "updated",
   page: 2
