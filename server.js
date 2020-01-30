@@ -4,7 +4,7 @@ var app = express()
 const API = require('animeflv-scrapper')
 
 const params = {
-  year: 2020,
+  year: 2019,
   type: "tv",
   status: 2,
   order: "updated",
