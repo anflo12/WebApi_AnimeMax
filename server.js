@@ -7,7 +7,7 @@ const params = {
   year: 2019,
   type: "tv",
   status: 2,
-  order: "updated",
+  order: "added",
   page: 1
 };
 app.get('/Animes', (req, res) => {
@@ -20,12 +20,19 @@ app.get('/Animes', (req, res) => {
 
 app.get('/AnimeEpisode', (req, res) => {
  
-  API.getAnimeInfo("one-piece-tv", 5495).then(dataepisode => {
+  API.getAnimeInfo("pet", 54043).then(dataepisode => {
     console.log(dataepisode)
     res.status(200).send({dataepisode})
   })
 })
 
+app.get('/LatestEpisodes', (req, res) => {
+ 
+  API.getLatestEpisodes().then(data => {
+    console.log(data)
+    res.status(200).send({data})
+  })
+})
 
 app.get('/AllAnimes', (req, res) => {
  
@@ -34,6 +41,17 @@ app.get('/AllAnimes', (req, res) => {
   });
    
 })
+
+app.get('/GetEpisodes', (req, res) => {
+ 
+  API.getEpisodeVideos(9, "pet", 54043).then(data => {
+    console.log(data);
+    res.status(200).send({data})
+  });
+   
+})
+
+app
 app.set('port',process.env.PORT || 3000)
 
 http.createServer(app).listen(app.get('port'), () => {
